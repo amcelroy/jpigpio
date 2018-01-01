@@ -130,6 +130,17 @@ A prerequisite of this package is the correct installation of pigpio on the Rasp
 
 Details of the installation techniques for this project to be provided here ...
 
+1. Download to pi: wget https://github.com/nkolban/jpigpio/archive/master.zip
+2. Compile java code to .class files:
+* unzip master.zip
+* cd jpigpio-master
+* cd jpigpio
+* mkdir bin
+* javac $(find . -name "*.java") -d bin
+2. Change JPigpio/Makefile install dir: i.e. /home/pi
+3. Change JPigpioC/Makefile to match above: i.e. /home/pi
+4. Make sure JAVA_HOME is set (mine wasn't). Added it to makefile.
+5. Run make from jpigpio-master
 ----
 # Mapping
 On occasion, you may find existing code written for either an Arduino (a sketch) or for alternate Raspberry Pi libraries such as Wiring Pi.  Here we provide a mapping from similar capabilities to those found in the JPigpio package.
